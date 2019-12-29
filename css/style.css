@@ -17,11 +17,11 @@ body {
 
 @font-face {
     font-family: 'Akrobat';
-    src: local('Akrobat Black'), local('Akrobat-Black'), 
-	    url('Akrobatblack.woff2') format('woff2'), 
-	    url('Akrobatblack.woff') format('woff'), 
-	    url('Akrobatblack.ttf') format('truetype');
-    font-weight: 900;
+    src: local('Akrobat'), local('Akrobat-Regular'), 
+	    url('fonts/Akrobat/Akrobat.woff2') format('woff2'), 
+	    url('fonts/Akrobat/Akrobat.woff') format('woff'), 
+	    url('fonts/Akrobat/Akrobat.ttf') format('truetype');
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -48,7 +48,6 @@ body {
     left: 452px;
     margin-top: -19px;
 }
-
 
 .first-section__img {
 	animation: .5s move forwards;
