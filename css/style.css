@@ -104,7 +104,7 @@ body {
 }
 
 .header__tel {
-	font-family: 'Akrobat';
+/*	font-family: 'Akrobat';*/
 	text-decoration: none;
 	font-weight: 900;
 	font-size: 18px;
@@ -197,7 +197,7 @@ body {
 	letter-spacing: 0.02em;
 	color: #F13365;
 	margin-bottom: 70px;
-	font-family: 'Akrobat';
+	/*font-family: 'Akrobat';*/
 }
 
 .second-section__menu {
