@@ -1,88 +1,147 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Cloudex</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="./fonts/fonts.css">
-	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
 <body>
-	<header>
+	<div class="first-section">
+		<div class="menu-mobile">
+			<div class="menu-mobile__container">
+				<div class="menu-mobile__closer"></div>
+				<a href="#" class="menu-mobile__item">
+					Услуги
+				</a>
+				<a href="#" class="menu-mobile__item">
+					О нас
+				</a>
+				<a href="#" class="menu-mobile__item">
+					Кейсы
+				</a>
+				<a href="#" class="menu-mobile__item">
+					Блог
+				</a>
+				<a href="#" class="menu-mobile__item">
+					Контакты
+				</a>
+			</div>
+		</div>
 		<div class="header">
-			<a href="/" class="logo">
-				<div class="logo__img"></div>
-				<div class="logo__text"></div>
+			<a href="/" class="header__logo"></a>
+			<div class="header__menu">
+				<a href="#" class="menu__item">
+					Услуги
+				</a>
+				<a href="#" class="menu__item">
+					О нас
+				</a>
+				<a href="#" class="menu__item">
+					Кейсы
+				</a>
+				<a href="#" class="menu__item">
+					Блог
+				</a>
+				<a href="#" class="menu__item">
+					Контакты
+				</a>
+			</div>
+			<a href="tel:79221995577" class="header__tel">
+				+7 (922) 199-55-77
 			</a>
-			<div class="header-menu">
-				<a href="/" class="header-menu__item">
-					Features
-				</a>
-				<a href="/" class="header-menu__item">
-					Contact
-				</a>
-				<a href="/" class="header-menu__item">
-					FAQ
-				</a>
-				<a href="/" class="header-menu__item">
-					Support
-				</a>
-				<a href="/" class="icon-facebook header-menu__item"></a>
-				<a href="/" class="icon-tweeter header-menu__item"></a>
-			</div>
-			<div class="burger-menu">
-				<div class="burger-menu__item"></div>
-				<div class="burger-menu__item"></div>
-				<div class="burger-menu__item"></div>
+			<div class="header__menu_mobile">
+				<div></div>
+				<div></div>
+				<div></div>
 			</div>
 		</div>
-		<div class="mobile-menu">
-			<div class="mobile-menu-close"></div>
-			<div class="header-mobile-menu">
-				<a href="/" class="header-mobile-menu__item">
-					start
-				</a>
-				<a href="/" class="header-mobile-menu__item">
-					services
-				</a>
-				<a href="/" class="header-mobile-menu__item">
-					about
-				</a>
-				<a href="/" class="header-mobile-menu__item">
-					blog
-				</a>
-				<a href="/" class="header-mobile-menu__item">
-					contact us
-				</a>
-			</div>
-		</div>
-	</header>
-	<div class="content">
-		<div class="content__title">
-			<h1 class="title">
-				Unlimited access.<br>To all your data.<br>Totally free.
-			</h1>
-			<h2 class="subtitle">
-				Secure unlimited File Sharing and Storage for your Business.<br>Absolutely Free! Iterate In Real Time. Comment With Style.<br>Share Instantly.
-			</h2>
-			<h2 class="subtitle-mobile">
-				Secure unlimited File Sharing and<br>Storage for your Business. Absolutely<br>Free! Iterate In Real Time. Comment<br>With Style. Share Instantly.
-			</h2>
-		</div>
-		<div class="content__form">
-			<div class="img-background-bottom"></div>
-			<div class="img-background-top"></div>
-			<form class="form">
-				<div class="form__title">
-					Take part in beta:
+		<div class="first-section__content">
+			<div class="first-section__content_main">
+				<div class="first-section__title">
+					Продвижение<br>бизнеса<br>в digital-среде.
 				</div>
-				<input class="form__email" type="email" name="email" placeholder="Email">
-				<input class="form__submit" type="submit" name="Get early access" value="Get early access">
-				<div class="form__subtitle">
-					By clicking sign-up, i agree to the <a href="/" class="link">Terms of Service</a> and <a href="/" class="link">Privacy Policy</a>
-				</div>
-			</form>
+				<a href="" class="first-section__button">
+					Сотрудничать
+				</a>
+			</div>
+			<div class="first-section__img"></div>
 		</div>
 	</div>
-	<footer class="footer"></footer>
+	<div class="second-section">
+		<div class="second-section__content">
+			<div class="second-section__title">
+				Услуги.
+			</div>
+			<div class="second-section__subtitle">
+				ОКАЗЫВАЕМ ШИРОКИЙ<br>СПЕКТР УСЛУГ
+			</div>
+			<div class="second-section__menu">
+				<a href="#" class="section-menu__item">
+					<div class="section-menu__item_title">
+						Контекстная<br>реклама
+					</div>
+					<div class="section-menu__item_arrow"></div>
+				</a>
+				<a href="#" class="section-menu__item">
+					<div class="section-menu__item_title">
+						Реклама<br>в соц. сетях
+					</div>
+					<div class="section-menu__item_arrow"></div>
+				</a>
+				<a href="#" class="section-menu__item">
+					<div class="section-menu__item_title">
+						E-mail<br>маркетинг
+					</div>
+					<div class="section-menu__item_arrow"></div>
+				</a>
+				<a href="#" class="section-menu__item section-menu__item_title--short">
+					<div class="section-menu__item_title">
+						Дизайн
+					</div>
+					<div class="section-menu__item_arrow section-menu__item_arrow--short"></div>
+				</a>
+				<a href="#" class="section-menu__item">
+					<div class="section-menu__item_title">
+						Создание<br>сайта
+					</div>
+					<div class="section-menu__item_arrow"></div>
+				</a>
+				<a href="#" class="section-menu__item">
+					<div class="section-menu__item_title">
+						Создание<br>Landing Page
+					</div>
+					<div class="section-menu__item_arrow"></div>
+				</a>
+				<a href="#" class="section-menu__item">
+					<div class="section-menu__item_title">
+						Внедрение<br>CRM
+					</div>
+					<div class="section-menu__item_arrow"></div>
+				</a>
+				<a href="#" class="section-menu__item">
+					<div class="section-menu__item_title">
+						Комплексный<br>маркетинг
+					</div>
+					<div class="section-menu__item_arrow"></div>
+				</a>
+				<a href="#" class="section-menu__item">
+					<div class="section-menu__item_title">
+						Заказать<br>услуги
+					</div>
+					<div class="section-menu__item_arrow"></div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(function(){
+            $('.header__menu_mobile').click(function(){
+                $('.menu-mobile').toggleClass('visible');
+            });
+            $('.menu-mobile__closer').click(function(){
+                $('.menu-mobile').toggleClass('visible');
+            });
+        });
+	</script>
 </body>
 </html>
