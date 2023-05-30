@@ -749,7 +749,8 @@
   }
 
   .slider-content {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
   }
 
   .footer {
@@ -789,6 +790,11 @@
   .edition__line {
     font-size: 18px;
     line-height: 22px;
+  }
+  
+  .form__agreement-text {
+    font-size: 12px;
+    line-height: 12px;
   }
 }
 
