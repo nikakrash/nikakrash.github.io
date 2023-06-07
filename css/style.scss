@@ -511,6 +511,7 @@ html {
     &::before {
       content: "";
       position: absolute;
+      top: -2px;
       left: 0;
       width: 20px;
       height: 20px;
@@ -795,6 +796,7 @@ html {
       padding-left: 4px;
       &::before {
         content: "";
+        top: 0;
         width: 15px;
         height: 12px;
       }
