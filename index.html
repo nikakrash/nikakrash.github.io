@@ -1,182 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Local-N</title>
-  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Test task</title>
 </head>
-
 <body class="page">
-  <header class="header page__section">
-    <ul class="navigation header__navigation">
-      <li class="navigation__item navigation__item_show-dropdown">
-        <div class="navigation__button navigation__button_arrow">Новости</div>
-        <nav class="dropdown-menu navigation__dropdown-menu navigation__dropdown-menu_hover">
-          <a href="#" class="dropdown-menu__link">Музыка</a>
-          <a href="#" class="dropdown-menu__link">События</a>
-          <a href="#" class="dropdown-menu__link">Мода</a>
-        </nav>
-      </li>
-      <li class="navigation__item">
-        <a href="#" class="navigation__link">Контакты</a>
-      </li>
-      <li class="navigation__item">
-        <a href="#" class="navigation__link">Подписаться</a>
-      </li>
-    </ul>
-    <div class="mobile-header" id="mobile-header">
-      <button class="menu-button mobile-header__open-menu-button">
-        <span class="menu-button__label">Меню</span>
-        <div class="menu-icon menu-button__icon"></div>
-      </button>
-    </div>
-    <h1 class="header__title">LOCAL-N</h1>
-    <h2 class="description header__description">
-      <div class="description__line">Диджитал-зин об актуальных</div>
-      <div class="description__line">трендах самого свободного</div>
-      <div class="description__line">поколения</div>
-    </h2>
-    <div class="edition header__edition">
-      <div class="edition__line">Выпуск № 06 Июнь 2021</div>
-    </div>
+  <header class="header">
+    <a href="#" class="header__logo"><img src="./img/logo.svg" alt="logo" class="logo"></a>
+    <nav class="nav header__nav">
+      <a href="#" class="nav__item nav__item_active">Бизнес</a>
+      <a href="#" class="nav__item">О нас</a>
+      <a href="#" class="nav__item">Цены</a>
+      <a href="#make-order" class="nav__item">Оформить заказ</a>
+    </nav>
+    <button class="menu-button">
+      <div class="menu-icon">
+        <span class="menu-icon__line"></span>
+        <span class="menu-icon__line"></span>
+        <span class="menu-icon__line"></span>
+      </div>
+    </button>
   </header>
   <div class="sticky-header sticky-header_disable">
-    <button class="menu-button sticky-header__open-menu-button">
-      <span class="menu-button__label">Меню</span>
-      <div class="menu-icon menu-button__icon"></div>
+    <a href="#" class="header__logo"><img src="./img/logo.svg" alt="logo" class="logo"></a>
+    <nav class="nav header__nav">
+      <a href="#" class="nav__item nav__item_active">Бизнес</a>
+      <a href="#" class="nav__item">О нас</a>
+      <a href="#" class="nav__item">Цены</a>
+      <a href="#make-order" class="nav__item">Оформить заказ</a>
+    </nav>
+    <button class="menu-button mobile-header__open-menu-button">
+      <div class="menu-icon">
+        <span class="menu-icon__line"></span>
+        <span class="menu-icon__line"></span>
+        <span class="menu-icon__line"></span>
+      </div>
     </button>
   </div>
-  <div class="menu">
-    <button class="menu-button menu__close-button-mobile">
-      <span class="menu-button__label menu-button__label_to-close">Закрыть</span>
-      <div class="menu-icon menu-button__icon menu-icon_close"></div>
-    </button>
-    <button class="menu-button menu-button_disabled menu__close-button">
-      <span class="menu-button__label menu-button__label_to-close">Закрыть</span>
-      <div class="menu-icon menu-icon_close menu-button__icon"></div>
-    </button>
-    <ul class="navigation menu__navigation">
-      <li class="navigation-button navigation__item navigation__item_vertical">
-        <button class="navigation__button navigation__button_arrow">Новости</button>
-        <nav class="dropdown-menu navigation__dropdown-menu navigation__dropdown-menu_click">
-          <a href="#" class="dropdown-menu__link">Музыка</a>
-          <a href="#" class="dropdown-menu__link">События</a>
-          <a href="#" class="dropdown-menu__link">Мода</a>
-        </nav>
+  <main>
+    <section class="opening section">
+      <h1 class="opening__title"><span class="text text_color_blue">Lorem ipsum</span> dolor sit ametconsectetur <span class="text text_color_blue">adipiscing</span></h1>
+      <div class="list-wrapper opening__list">
+        <p class="list-wrapper__text">At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
+        <ul class="list list-wrapper__list">
+          <li class="list__item">Totam rem aperiam eaque ipsa</li>
+          <li class="list__item">Sit voluptatem accusantium doloremque laudantium</li>
+          <li class="list__item">Sed ut perspiciatis, unde omnis iste natus error</li>
+        </ul>
+      </div>
+      <div class="buttons-wrapper opening__buttons">
+        <button class="button buttons-wrapper__button">заказать</button>
+        <button class="button button_color_white buttons-wrapper__button">подробнее</button>
+      </div>
+    </section>
+    <section class="order section" id="make-order">
+      <div class="title-wrapper order__title">
+        <h2 class="title-wrapper__title">Оформление <span class="text text_color_blue">Заказа</span></h2>
+        <p class="title-wrapper__text">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+      </div>
+      <div class="order-info order__info">
+        <div class="order-info-item order-info__item">
+          <img src="./img/icon-search.svg" alt="icon" class="order-info-item__icon">
+          <p class="order-info-item__text">Lorem ipsum dolor sit amet</p>
+        </div>
+        <div class="order-info-item order-info__item">
+          <img src="./img/icon-percent.svg" alt="icon" class="order-info-item__icon">
+          <p class="order-info-item__text">Сonsecteturadipiscing elit</p>
+        </div>
+        <div class="order-info-item order-info__item">
+          <img src="./img/icon-document.svg" alt="icon" class="order-info-item__icon">
+          <p class="order-info-item__text">Sed do eiusmod tempor</p>
+        </div>
+        <div class="order-info-item order-info__item">
+          <img src="./img/icon-mail.svg" alt="icon" class="order-info-item__icon">
+          <p class="order-info-item__text">Esse cillum dolore eu fugiat</p>
+        </div>
+        <div class="order-info-item order-info__item">
+          <img src="./img/icon-payment.svg" alt="icon" class="order-info-item__icon">
+          <p class="order-info-item__text">Excepteur sint occaecat cupidatat non proident</p>
+        </div>
+      </div>
+      <form action="" class="form order__form">
+        <div class="select form__item" data-state="">
+          <div class="select__title" data-default="Option 0">Выберите тип системы</div>
+          <div class="select__content">
+            <label for="option-sed" class="select__label">Sed ut perspiciatis</label>
+            <input id="option-sed" class="select__input" type="radio" name="singleSelect" />
+            <label for="option-nemo" class="select__label">Nemo enim ipsam</label>
+            <input id="option-nemo" class="select__input" type="radio" name="singleSelect" />
+            <label for="option-et" class="select__label">Et harum quidem</label>
+            <input id="option-et" class="select__input" type="radio" name="singleSelect" />
+            <label for="option-temporibus" class="select__label">Temporibus autem</label>
+            <input id="option-temporibus" class="select__input" type="radio" name="singleSelect" />
+            <label for="option-ttaque" class="select__label">Itaque earum rerum</label>
+            <input id="option-ttaque" class="select__input" type="radio" name="singleSelect" />
+            <label for="option-it" class="select__label">Itaque earum</label>
+            <input id="option-it" class="select__input" type="radio" name="singleSelect" />
+            <label for="option-i" class="select__label">Itaque</label>
+            <input id="option-i" class="select__input" type="radio" name="singleSelect" />
+          </div>
+        </div>
+        <input type="email" name="email" class="input form__item" placeholder="Ваш e-mail">
+        <input type="text" name="text" class="input form__item" placeholder="Ваше имя">
+        <div class="slider form__item">
+          <div class="slider__info">
+            <label for="range" class="slider__label">Sed ut perspiciatis, unde omnis iste natus</label>
+            <span class="slider__percent">75 %</span>
+          </div>
+          <input type="range" name="range" min="1" max="100" value="75" class="slider__range">
+        </div>
+        <div class="button-add-file form__item">
+          <label for="attache-file" class="button-add-file__label"><span class="text text_icon_add-file">прикрепить файл</span></label>
+          <input id="attache-file" class="button-add-file__input" name="file" type="file">
+        </div>
+        <button type="submit" name="submit" class="button button_size_l form__submit">Отправить</button>
+      </form>
+    </section>
+  </main>
+  <footer class="footer section">
+    <p class="copyright">© 2018 «LoremIpsum.net» Все права защищены.</p>
+    <ul class="horisontal-list footer__item">
+      <li class="horisontal-list__item horisontal-list__item_icon_qiwi">Qiwi wallet</li>
+      <li class="horisontal-list__item horisontal-list__item_icon_yandex">Yandex Money</li>
+      <li class="horisontal-list__item horisontal-list__item_icon_web">Web Money</li>
+    </ul>
+    <ul class="horisontal-list footer__item">
+      <li class="horisontal-list__item horisontal-list__item_color_white">
+        <a class="horisontal-list__item-link horisontal-list__item-link_icon_mail" href="mail:info@ipsum228.com">info@ipsum228.com</a>
       </li>
-      <li class="navigation__item navigation__item_vertical">
-        <a href="#" class="navigation__link">Контакты</a>
-      </li>
-      <li class="navigation__item navigation__item_vertical">
-        <a href="#" class="navigation__link">Подписаться</a>
+      <li class="horisontal-list__item">
+        <a class="horisontal-list__item-link horisontal-list__item-link_icon_vk" href="https://vk.com">Мы вконтакте</a>
       </li>
     </ul>
-  </div>
-  <section class="news page__section">
-    <h3 class="section-title news__title">Новости</h3>
-    <div class="slider news__slider">
-      <div class="slider-navigation slider__navigation">
-        <button class="slider-navigation__arrow slider-navigation__arrow_left"></button>
-        <button class="slider-navigation__arrow slider-navigation__arrow_right"></button>
-      </div>
-      <div class="progress-bar">
-        <div class="progress-bar__indicator" id="indicator"></div>
-      </div>
-      <div class="slider-content slider__slider-content">
-        <div class="slide slider-content__slide">
-          <a href="#" class="card-image slide__card">
-            <img src="./images/slider-image-1.jpg" class="card-image__image" alt="">
-            <div class="card-image__button">смотреть новость</div>
-          </a>
-          <h4 class="slide__title">Ароматы лета. Выбор редакции</h4>
-          <div class="slide__date">20 июня 2021 г.</div>
-        </div>
-        <div class="slide slider-content__slide">
-          <a href="#" class="card-image slide__card">
-            <img src="./images/slider-image-2.jpg" class="card-image__image" alt="">
-            <div class="card-image__button">смотреть новость</div>
-          </a>
-          <h4 class="slide__title">Новый трек МС Кулак. Главный бэнгер сезона?</h4>
-          <div class="slide__date">20 июня 2021 г.</div>
-        </div>
-        <div class="slide slider-content__slide">
-          <a href="#" class="card-image slide__card">
-            <img src="./images/slider-image-3.jpg" class="card-image__image" alt="">
-            <div class="card-image__button">смотреть новость</div>
-          </a>
-          <h4 class="slide__title">Открытие выставки фотографа Криса Хэттингера</h4>
-          <div class="slide__date">20 июня 2021 г.</div>
-        </div>
-        <div class="slide slider-content__slide">
-          <a href="#" class="card-image slide__card">
-            <img src="./images/slider-image-4.jpg" class="card-image__image" alt="">
-            <div class="card-image__button">смотреть новость</div>
-          </a>
-          <h4 class="slide__title">DJ Deejay выступит на открытии нового клуба</h4>
-          <div class="slide__date">20 июня 2021 г.</div>
-        </div>
-        <div class="slide slider-content__slide">
-          <a href="#" class="card-image slide__card">
-            <img src="./images/slider-image-5.jpg" class="card-image__image" alt="">
-            <div class="card-image__button">смотреть новость</div>
-          </a>
-          <h4 class="slide__title">Из грязи в князи. Интервью с популярным дизайнером одежды Пэтом Джонсоном</h4>
-          <div class="slide__date">20 июня 2021 г.</div>
-        </div>
-        <div class="slide slider-content__slide">
-          <a href="#" class="card-image slide__card">
-            <img src="./images/slider-image-1.jpg" class="card-image__image" alt="">
-            <div class="card-image__button">смотреть новость</div>
-          </a>
-          <h4 class="slide__title">Ароматы лета. Выбор редакции</h4>
-          <div class="slide__date">20 июня 2021 г.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer class="footer page__section page__section_theme_dark">
-    <section class="footer__section">
-      <h3 class="section-title section-title_color_white">Instagram</h3>
-      <div class="instagram">
-        <a href="#" class="instagram__image-link">
-          <img src="./images/instagram-img-1.jpg" alt="" class="instagram__image">
-        </a>
-        <a href="#" class="instagram__image-link">
-          <img src="./images/instagram-img-2.jpg" alt="" class="instagram__image">
-        </a>
-        <a href="#" class="instagram__image-link">
-          <img src="./images/instagram-img-3.jpg" alt="" class="instagram__image">
-        </a>
-        <a href="#" class="instagram__image-link">
-          <img src="./images/instagram-img-4.jpg" alt="" class="instagram__image">
-        </a>
-      </div>
-    </section>
-    <section class="footer-section footer__section">
-      <h3 class="section-title section-title_color_white">Подписаться</h3>
-      <div class="subscribe">
-        <h4 class="subscribe__title">
-          Каждую неделю мы рассылаем дайджест самых интересных новостей
-        </h4>
-        <form action="" class="form subscribe__form">
-          <fieldset class="form__subscribe-info">
-            <input type="email" class="form__input-email" placeholder="Укажите свой email">
-            <input type="submit" class="form__submit" placeholder="Подписаться">
-            <label class="form__agreement">
-              <input type="checkbox" class="form__agreement-checkbox">
-              <span class="form__agreement-custom-checkbox"></span>
-              <span class="form__agreement-text">Я даю согласие на обработку персональных данных</span>
-            </label>
-          </fieldset>
-        </form>
-      </div>
-    </section>
-    <p class="footer__copyright">2021 © Все права защищены</p>
   </footer>
   <script src="./js/script.js"></script>
 </body>
-
 </html>
