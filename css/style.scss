@@ -826,6 +826,12 @@ html {
   .nav {
     display: none;
   }
+  
+  .menu-button {
+    display: flex;
+    background: none;
+    border: none;
+  }
 
   .menu-icon {
     display: flex;
