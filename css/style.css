@@ -646,6 +646,11 @@ html {
 @media (max-width: 768px) {
   .nav {
     display: none; }
+  
+  .menu-button {
+    display: flex;
+    background: none;
+    border: none; }
 
   .menu-icon {
     display: flex;
