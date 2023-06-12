@@ -11,6 +11,7 @@ const headerMenuButton = document.querySelector(".header__menu-button");
 const stickyHeaderMenuButton = document.querySelector(".sticky-header__menu-button");
 const headerMenuButtonIcon = document.querySelector(".header__menu-button .menu-icon");
 const stickyHeaderMenuButtonIcon = document.querySelector(".sticky-header__menu-button .menu-icon");
+const navLinksArray = document.querySelectorAll(".nav__item");
 
 selectTitle.addEventListener("click", () => {
   if ("active" === select.getAttribute("data-state")) {
@@ -41,7 +42,7 @@ window.onscroll = () => {
   toggleStickyHeader();
 };
 
-slider.addEventListener("click", () => {
+slider.addEventListener("change", () => {
   sliderValue.textContent = slider.value;
 })
 
@@ -59,3 +60,12 @@ stickyHeaderMenuButton.addEventListener("click", () => {
   toggleMenu();
   stickyHeaderMenuButtonIcon.classList.toggle("menu-icon_cross");
 });
+
+navLinksArray.forEach(link => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("menu_open");
+    page.classList.remove("page_scroll_off");
+    headerMenuButtonIcon.classList.remove("menu-icon_cross");
+    stickyHeaderMenuButtonIcon.classList.remove("menu-icon_cross");
+  })
+})
