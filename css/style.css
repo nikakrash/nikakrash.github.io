@@ -84,7 +84,7 @@ html {
   display: flex; }
   .nav_vertical {
     flex-direction: column;
-    gap: 50px; }
+    gap: 45px; }
   .nav__item {
     font-size: 13px;
     text-transform: uppercase;
@@ -106,7 +106,6 @@ html {
   background-size: cover; }
   .opening__title {
     margin: 0 0 80px;
-    width: 780px;
     font-size: 48px;
     font-weight: 700;
     line-height: 57px;
@@ -230,6 +229,7 @@ html {
     font-size: 16px;
     line-height: 19px;
     color: #fff;
+    word-break: break-word;
     text-align: center; }
 
 .form {
@@ -482,7 +482,6 @@ html {
     padding-bottom: 100px; }
     .opening__title {
       margin-bottom: 47px;
-      width: 707px;
       font-size: 44px;
       line-height: 52px; }
     .opening__list {
@@ -542,7 +541,6 @@ html {
     width: 165px; }
 
   .nav__item {
-    font-size: 12px;
     margin-right: 25px; }
 
   .opening {
@@ -550,7 +548,6 @@ html {
     padding-bottom: 80px; }
     .opening__title {
       margin-bottom: 30px;
-      width: 540px;
       font-size: 30px;
       line-height: 37px; }
     .opening__list {
@@ -616,7 +613,7 @@ html {
     padding: 0 9px;
     font-size: 14px; }
   .select__title {
-    padding: 9px 23px 10px 7px;
+    padding: 10px 23px 10px 7px;
     font-size: 14px; }
   .select__content {
     top: 40px; }
@@ -685,7 +682,8 @@ html {
 @media (max-width: 768px) {
   .nav {
     display: none; }
-  
+    .nav__item {
+      font-size: 15px; }
   .menu-button {
     display: flex;
     background: none;
@@ -705,7 +703,6 @@ html {
     padding-bottom: 55px; }
     .opening__title {
       margin-bottom: 20px;
-      width: 100%;
       font-size: 17px;
       line-height: 26px; }
 
@@ -745,7 +742,9 @@ html {
       display: none; }
 
   .order-info-item {
-    width: 120px; }
+    width: 95px; }
+    .order-info-item :last-child {
+      width: 100px; }
     .order-info-item__icon {
       width: 50px; }
     .order-info-item_text {
@@ -786,5 +785,8 @@ html {
 
   .horisontal-list__item-link::before {
     top: 0px; } }
+@media (max-width: 425px) {
+  .list-wrapper__text {
+    width: 260px; } }
 
 /*# sourceMappingURL=style.css.map */
