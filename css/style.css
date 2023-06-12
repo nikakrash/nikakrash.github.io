@@ -308,6 +308,8 @@ html {
     overflow-y: auto;
     background-color: #3D4050;
     border-radius: 0 0 3px 3px;
+    scrollbar-color: #3e9cdc #3d4050;
+    scrollbar-width: thin;
     opacity: 0;
     z-index: -1;
     box-sizing: border-box;
@@ -456,6 +458,7 @@ html {
     .horisontal-list__item-link::before {
       content: "";
       position: absolute;
+      top: -2px;
       left: 0;
       width: 20px;
       height: 20px;
@@ -673,6 +676,7 @@ html {
     padding-left: 4px; }
     .horisontal-list__item-link::before {
       content: "";
+      top: 0px;
       width: 15px;
       height: 12px; } }
 @media (max-width: 768px) {
@@ -680,6 +684,10 @@ html {
     display: none; }
     .nav__item {
       font-size: 15px; }
+  .menu-button {
+    display: flex;
+    background: none;
+    border: none; }
 
   .menu-button {
     display: block; }
