@@ -16,7 +16,7 @@
       <a href="#" class="nav__item">Цены</a>
       <a href="#make-order" class="nav__item">Оформить заказ</a>
     </nav>
-    <button class="menu-button">
+    <button class="menu-button header__menu-button">
       <div class="menu-icon">
         <span class="menu-icon__line"></span>
         <span class="menu-icon__line"></span>
@@ -26,13 +26,13 @@
   </header>
   <div class="sticky-header sticky-header_disable">
     <a href="#" class="header__logo"><img src="./img/logo.svg" alt="logo" class="logo"></a>
-    <nav class="nav header__nav">
+    <nav class="nav sticky-header__nav">
       <a href="#" class="nav__item nav__item_active">Бизнес</a>
       <a href="#" class="nav__item">О нас</a>
       <a href="#" class="nav__item">Цены</a>
       <a href="#make-order" class="nav__item">Оформить заказ</a>
     </nav>
-    <button class="menu-button mobile-header__open-menu-button">
+    <button class="menu-button sticky-header__menu-button">
       <div class="menu-icon">
         <span class="menu-icon__line"></span>
         <span class="menu-icon__line"></span>
@@ -40,9 +40,17 @@
       </div>
     </button>
   </div>
+  <div class="menu">
+    <nav class="nav nav_vertical menu__nav">
+      <a href="#" class="nav__item nav__item_active">Бизнес</a>
+      <a href="#" class="nav__item">О нас</a>
+      <a href="#" class="nav__item">Цены</a>
+      <a href="#make-order" class="nav__item">Оформить заказ</a>
+    </nav>
+  </div>
   <main>
     <section class="opening section">
-      <h1 class="opening__title"><span class="text text_color_blue">Lorem ipsum</span> dolor sit ametconsectetur <span class="text text_color_blue">adipiscing</span></h1>
+      <h1 class="opening__title"><span class="text text_color_blue">Lorem ipsum</span> dolor sit<br>ametconsectetur <span class="text text_color_blue">adipiscing</span></h1>
       <div class="list-wrapper opening__list">
         <p class="list-wrapper__text">At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
         <ul class="list list-wrapper__list">
@@ -83,7 +91,7 @@
           <p class="order-info-item__text">Excepteur sint occaecat cupidatat non proident</p>
         </div>
       </div>
-      <form action="" class="form order__form">
+      <form action="#" class="form order__form">
         <div class="select form__item" data-state="">
           <div class="select__title" data-default="Option 0">Выберите тип системы</div>
           <div class="select__content">
@@ -104,13 +112,13 @@
           </div>
         </div>
         <input type="email" name="email" class="input form__item" placeholder="Ваш e-mail">
-        <input type="text" name="text" class="input form__item" placeholder="Ваше имя">
+        <input type="text" name="name" class="input form__item" placeholder="Ваше имя">
         <div class="slider form__item">
           <div class="slider__info">
             <label for="range" class="slider__label">Sed ut perspiciatis, unde omnis iste natus</label>
-            <span class="slider__percent">75 %</span>
+            <span class="slider__percent"><span class="slider__value">75</span> %</span>
           </div>
-          <input type="range" name="range" min="1" max="100" value="75" class="slider__range">
+          <input type="range" name="range" min="0" max="100" value="75" class="slider__range">
         </div>
         <div class="button-add-file form__item">
           <label for="attache-file" class="button-add-file__label"><span class="text text_icon_add-file">прикрепить файл</span></label>
