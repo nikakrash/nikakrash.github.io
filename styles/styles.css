@@ -282,10 +282,12 @@ h2 {
     margin-right: auto;
   }
 
-  .slider,
+  .slider {
+    width: 330px;
+  }
+  
   .slide {
     min-width: 305px;
-    width: 305px;
   }
 }
 
@@ -300,6 +302,10 @@ h2 {
 
   .quote {
     margin: 0 20px;
+  }
+
+  .block-offer {
+    padding: 0 20px;
   }
 
   .presentation__subtitle {
