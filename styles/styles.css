@@ -22,7 +22,8 @@
 
 p,
 h1,
-h2 {
+h2,
+h3 {
   margin: 0;
 }
 
@@ -127,45 +128,48 @@ h2 {
   margin-bottom: 50px;
 }
 
-.presentation__title {
+.presentation__title-wrapper {
+  margin-bottom: 42px;
+}
+
+.title-wrapper__title {
   text-align: center;
   margin-bottom: 13px;
 }
 
-.presentation__subtitle {
+.title-wrapper__subtitle {
   text-align: center;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.8px;
-  margin-bottom: 42px;
 }
 
-.presentation__items {
+.gallery {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   row-gap: 50px
 }
 
-.presentation__img {
+.gallery__img {
   max-width: 710px;
 }
 
-.presentation-info {
+.gallery-info {
   padding: 0 55px;
   box-sizing: border-box;
 }
 
-.presentation-info__title {
+.gallery-info__title {
   margin-bottom: 13px;
 }
 
-.presentation-info__text {
+.gallery-info__text {
   width: 600px;
   margin-bottom: 13px;
 }
 
-.presentation-info__text:last-child {
+.gallery-info__text:last-child {
   margin-bottom: 0;
 }
 
@@ -236,16 +240,16 @@ h2 {
     width: calc(100% - 80px);
   }
 
-  .presentation__img,
-  .presentation-info {
+  .gallery__img,
+  .gallery-info {
     width: 50%;
   }
 
-  .presentation-info__text {
+  .gallery-info__text {
     width: 100%;
   }
 
-  .presentation-info {
+  .gallery-info {
     padding: 0 40px;
   }
 
@@ -255,15 +259,15 @@ h2 {
 }
 
 @media (max-width: 1024px) {
-  .presentation__items {
+  .gallery {
     flex-direction: column;
   }
 
-  .presentation-info {
+  .gallery-info {
     width: 100%;
   }
 
-  .presentation__img {
+  .gallery__img {
     width: 70%;
   }
 }
@@ -274,7 +278,7 @@ h2 {
   }
 
   .block-offer__title,
-  .presentation__title,
+  .title-wrapper__title,
   .favorites__title {
     text-align: center;
     width: 300px;
@@ -289,6 +293,7 @@ h2 {
   .slider {
     width: 305px;
   }
+
   .slide {
     min-width: 305px;
   }
@@ -311,19 +316,19 @@ h2 {
     padding: 0 20px;
   }
 
-  .presentation__subtitle {
+  .presentation__title-wrapper {
     margin-bottom: 50px;
   }
 
-  .presentation__img {
+  .gallery__img {
     width: 100%;
   }
 
-  .presentation-info_margin_size_l {
+  .gallery-info_margin_size_l {
     margin-bottom: 50px;
   }
 
-  .presentation-info {
+  .gallery-info {
     padding: 0 20px;
   }
 
@@ -347,11 +352,11 @@ h2 {
 }
 
 @media (max-width: 370px) {
-    .slider {
-        width: 260px;
-    }
-    
-    .slide {
-        min-width: 260px;
-    }
+  .slider {
+    width: 260px;
+  }
+
+  .slide {
+    min-width: 260px;
+  }
 }
