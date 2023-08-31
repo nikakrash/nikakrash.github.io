@@ -283,7 +283,7 @@ h2 {
   }
 
   .slider {
-    width: 310px;
+    width: 305px;
   }
   
   .slide {
@@ -341,4 +341,14 @@ h2 {
   .slider-arrow_next {
     right: -3px
   }
+}
+
+@media (max-width: 370px) {
+    .slider {
+        width: 260px;
+    }
+    
+    .slide {
+        min-width: 260px;
+    }
 }
