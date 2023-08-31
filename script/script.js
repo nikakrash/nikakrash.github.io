@@ -1,12 +1,13 @@
-const sliderArrowPrev = document.querySelector(".slider-arrow_prev");
-const sliderArrowNext = document.querySelector(".slider-arrow_next");
+const sliderArrowLeft = document.querySelector(".slider-arrow_left");
+const sliderArrowRight = document.querySelector(".slider-arrow_right");
 const sliderContent = document.querySelector(".slider-content");
 const slideWidth = document.querySelector(".slide").clientWidth;
 const countOfSlides = document.querySelectorAll(".slide").length;
-const slideMargin = 20;
-const sliderContentWidth = (slideWidth * (countOfSlides - 1)) + (slideMargin * (countOfSlides - 1));
-const numberOfSliderMovements = Math.ceil((sliderContentWidth - sliderContent.clientWidth) / (slideWidth + slideMargin));
-const scrollStepWidth = slideWidth + slideMargin;
+const slideGapValue = window.getComputedStyle(sliderContent).getPropertyValue('gap');
+const slideGap = parseInt(slideGapValue, 10);
+const sliderContentWidth = (slideWidth * (countOfSlides - 1)) + (slideGap * (countOfSlides - 1));
+const numberOfSliderMovements = Math.ceil((sliderContentWidth - sliderContent.clientWidth) / (slideWidth + slideGap));
+const scrollStepWidth = slideWidth + slideGap;
 let numberOfScrolledPart = 0;
 
 const canSliderMoveRight = () => {
@@ -15,6 +16,14 @@ const canSliderMoveRight = () => {
 
 const canSliderMoveLeft = () => {
     return numberOfScrolledPart !== 0;
+}
+
+const isItLastMoveRight = () => {
+    return numberOfScrolledPart === numberOfSliderMovements;
+}
+
+const isItLastMoveLeft = () => {
+    return numberOfScrolledPart === 0;
 }
 
 const scrollRight = () => {
@@ -31,24 +40,28 @@ const scrollLeft = () => {
     })
 }
 
-sliderArrowPrev.addEventListener("click", () => {
+sliderArrowLeft.addEventListener("click", () => {
     if (canSliderMoveLeft()) {
         scrollLeft();
         numberOfScrolledPart--;
-        sliderArrowNext.classList.remove('slider-arrow_disable');
+
+        if (isItLastMoveLeft()) {
+            sliderArrowLeft.classList.add('slider-arrow_disable');
+        }
     }
-    else {
-        sliderArrowPrev.classList.add('slider-arrow_disable');
-    }
+
+    sliderArrowRight.classList.remove('slider-arrow_disable');
 });
 
-sliderArrowNext.addEventListener("click", () => {
+sliderArrowRight.addEventListener("click", () => {
     if (canSliderMoveRight()) {
         scrollRight();
         numberOfScrolledPart++;
-        sliderArrowPrev.classList.remove('slider-arrow_disable');
+
+        if (isItLastMoveRight()) {
+            sliderArrowRight.classList.add('slider-arrow_disable');
+        }
     }
-    else {
-        sliderArrowNext.classList.add('slider-arrow_disable');
-    }
+
+    sliderArrowLeft.classList.remove('slider-arrow_disable');
 });
