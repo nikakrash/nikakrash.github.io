@@ -399,14 +399,6 @@
   font-size: 16px;
 }
 
-.form__input-email::placeholder,
-.form__input-email::-moz-placeholder {
-  font-size: 16px;
-  line-height: 24px;
-  color: #fff;
-  font-family: 'Golos';
-}
-
 .form__input-email:focus {
   outline: none;
 }
