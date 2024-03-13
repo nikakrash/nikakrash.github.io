@@ -997,6 +997,10 @@ p {
         width: 213px;
     }
 
+    .first-screen {
+        height: calc(100vh - 38px);
+    }
+
     .first-screen__text {
         margin-bottom: 32px;
     }
