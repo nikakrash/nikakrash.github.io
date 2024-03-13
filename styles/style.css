@@ -1,23 +1,23 @@
 @font-face {
     font-family: 'Merriweather';
-    src: url(./fonts/Merriweather/Merriweather.ttf);
+    src: url(../fonts/Merriweather/Merriweather.ttf);
 }
 
 @font-face {
     font-family: 'GolosText';
-    src: url(./fonts/GolosText/GolosText-Regular.ttf);
+    src: url(../fonts/GolosText/GolosText-Regular.ttf);
     font-weight: 400;
 }
 
 @font-face {
     font-family: 'GolosText';
-    src: url(./fonts/GolosText/GolosText-Medium.ttf);
+    src: url(../fonts/GolosText/GolosText-Medium.ttf);
     font-weight: 500;
 }
 
 @font-face {
     font-family: 'GolosText';
-    src: url(./fonts/GolosText/GolosText-SemiBold.ttf);
+    src: url(../fonts/GolosText/GolosText-SemiBold.ttf);
     font-weight: 600;
 }
 
@@ -65,7 +65,7 @@ p {
     padding-top: 26px;
     padding-left: calc(50% - 611px);
     box-sizing: border-box;
-    background-image: url(./images/first-screen-background.jpg);
+    background-image: url(../images/first-screen-background.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -171,7 +171,7 @@ p {
     display: flex;
     align-items: center;
     gap: 30px;
-    animation: running-line 15s linear infinite; /* вычислить время чтобы не было пробелов */
+    animation: running-line 15s linear infinite;
 }
 
 .running-line__text-item {
@@ -239,7 +239,7 @@ p {
     content: "";
     width: 394px;
     height: 250px;
-    background-image: url(./images/chess-players-1.png);
+    background-image: url(../images/chess-players-1.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -251,8 +251,6 @@ p {
     padding-left: 544px;
 }
 
-/* подумать как убрать отрицательные значения */
-/* проверить координаты по пп */
 .section-support__wrapper::after {
     position: absolute;
     top: 0;
@@ -260,7 +258,7 @@ p {
     content: "";
     width: 528px;
     height: 568px;
-    background-image: url(./images/chess-players-2.png);
+    background-image: url(../images/chess-players-2.png);
     background-size: contain;
     background-repeat: no-repeat;
 };
@@ -357,7 +355,7 @@ p {
     content: '';
     width: 361px;
     height: 194px;
-    background-image: url(./images/plane.png);
+    background-image: url(../images/plane.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -390,7 +388,7 @@ p {
 .stages-list__item {
     position: relative;
     padding: 20px 20px 20px 72px;
-    background-image: url(./images/stages-list-item-background.jpg);
+    background-image: url(../images/stages-list-item-background.jpg);
     font-family: 'GolosText';
     font-weight: 500;
     font-size: 20px;
@@ -506,7 +504,7 @@ p {
     height: 44px;
     border: none;
     border-radius: 22px;
-    background-image: url(./images/icon-slider-button.svg);
+    background-image: url(../images/icon-slider-button.svg);
     background-color: #313131;
     background-repeat: no-repeat;
     background-position: center;
@@ -578,7 +576,6 @@ p {
         font-size: 30px;
     }
 
-    /* сделать навигацию слайдера относительно слайдра а не секции (но тогда будут отриц значения???) */
     .slider-navigation {
         right: 30px;
     }
@@ -741,7 +738,7 @@ p {
 
 @media (max-width: 768px) {
     .first-screen {
-        background-image: url(./images/first-screen-background_mobile.jpg);
+        background-image: url(../images/first-screen-background_mobile.jpg);
         height: calc(100vh - 56px);
         padding: 18px 20px 0 20px;
     }
@@ -1007,7 +1004,7 @@ p {
     .running-line {
         height: 38px;
     }
-    
+
     .running-line__text-item {
         font-size: 16px;
     }
