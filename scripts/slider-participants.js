@@ -33,7 +33,8 @@ const scrollLeft = () => {
     if (slider.scrollLeft === 0) {
         scroll(sliderContentWidth);
         sliderNavigationCurrentSlide.textContent = countOfSlides;
-    } else {
+    }
+    else {
         scroll(slider.scrollLeft - sliderWindowWidth - sliderGapWidth);
         sliderNavigationCurrentSlide.textContent-=countOfSlidesInWindow;
     }
@@ -43,14 +44,14 @@ const scrollRight = () => {
     if (slider.scrollLeft > sliderContentWidth - sliderWindowWidth - sliderGapWidth) {
         scroll(0);
         sliderNavigationCurrentSlide.textContent = countOfSlidesInWindow;
-    } else {
+    }
+    else {
         scroll(slider.scrollLeft + sliderWindowWidth + sliderGapWidth);
-
-        sliderNavigationCurrentSlide.textContent = Math.ceil(slider.scrollLeft / (sliderWindowWidth + sliderGapWidth)) + 2;
+        sliderNavigationCurrentSlide.textContent = parseInt(sliderNavigationCurrentSlide.textContent) + countOfSlidesInWindow;
     }
 }
 
-let autoSwitch;
+let autoSwitch = setInterval(scrollRight, intervalTime);
 
 sliderArrowLeft.addEventListener('click', () => {
     scrollLeft();
@@ -65,25 +66,3 @@ sliderArrowRight.addEventListener('click', () => {
     clearInterval(autoSwitch);
     autoSwitch = setInterval(scrollRight, intervalTime);
 })
-
-function isElementInViewport(el) {
-    const rect = el.getBoundingClientRect();
-
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
-
-function onVisibilityChange() {
-    if (isElementInViewport(slider)) {
-        autoSwitch = setInterval(scrollRight, intervalTime);
-    } else {
-        clearInterval(autoSwitch);
-    }
-}
-
-window.addEventListener('scroll', onVisibilityChange);
-document.addEventListener('DOMContentLoaded', onVisibilityChange);
