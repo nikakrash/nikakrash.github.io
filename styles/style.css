@@ -346,6 +346,10 @@ p {
     padding-bottom: 200px;
 }
 
+.stages-list-navigation {
+    display: none;
+}
+
 .section-stages::after {
     position: absolute;
     bottom: 226px;
@@ -496,7 +500,8 @@ p {
     gap: 14px;
 }
 
-.slider-navigation__button {
+.slider-navigation__button,
+.stages-list-navigation__button {
     width: 44px;
     height: 44px;
     border: none;
@@ -515,7 +520,8 @@ p {
     background-color: #fbce51;
 }
 
-.slider-navigation__button_prev {
+.slider-navigation__button_prev,
+.stages-list-navigation__button_prev {
     transform: rotate(180deg);
 }
 
@@ -723,6 +729,14 @@ p {
     .stages-list__item:nth-child(7) {
         grid-column: 3 / span 2;
     }
+
+    .slider-navigation__button:hover {
+        background-color: currentColor;
+    }
+
+    .slider-navigation__button:active {
+        background-color: #fbce51;
+    }
 }
 
 @media (max-width: 768px) {
@@ -828,14 +842,15 @@ p {
     }
 
     .stages-list {
-        grid-row-gap: 0;
+        grid-gap: 0;
         overflow: hidden;
     }
 
     .stages-list__item {
         padding: 62px 20px 34px 72px;
         font-size: 18px;
-        width: calc(100vw - 132px);
+        width: calc(100vw - 60px);
+        box-sizing: border-box;
     }
 
     .stages-list__item::after {
@@ -910,13 +925,50 @@ p {
         padding-bottom: 176px;
     }
 
-    .slider-navigation__button {
+    .slider-navigation__button,
+    .stages-list-navigation__button {
         width: 36px;
         height: 36px;
     }
 
     .footer {
         padding: 40px 20px 60px 20px;
+    }
+
+    .section-participants__title {
+        margin-bottom: 40px;
+    }
+
+    .stages-list-wrapper {
+        position: relative;
+    }
+
+    .stages-list-navigation {
+        margin-top: 28px;
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .stages-list-navigation__button_disable {
+        background-color: rgba(49, 49, 49, 0.2);
+    }
+
+    .stages-list-navigation__points {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .stages-list-navigation__point {
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: #d9d9d9;
+    }
+
+    .stages-list-navigation__point_active {
+        background-color: #313131;
     }
 }
 
@@ -992,5 +1044,9 @@ p {
         right: 20px;
         height: 182px;
         width: calc(100vw - 70px);
+    }
+
+    .stages-list__item {
+        width: calc(100vw - 40px);
     }
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Клуб четырех коней</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <link type="Image/x-icon" href="./favicon.ico" rel="icon">
 </head>
 <body class="body">
@@ -16,8 +16,8 @@
             <h1 class="title first-screen__title">Превратите уездный город<span class="title_center">в столицу</span><span class="title_right">земного шара</span></h1>
             <p class="first-screen__text">Оплатите взнос на телеграммы для организации Международного васюкинского турнира по шахматам</p>
             <div class="first-screen__button-wrapper">
-                <a href="#support" class="first-screen__button first-screen__button_filled">Поддержать<br>шахматную мысль</a>
-                <a href="#stages" class="first-screen__button first-screen__button_contured">Подробнее<br>о турнире</a>
+                <a href="#support" class="first-screen__button first-screen__button_filled">Поддержать <br>шахматную мысль</a>
+                <a href="#stages" class="first-screen__button first-screen__button_contured">Подробнее <br>о турнире</a>
             </div>
         </div>
     </section>
@@ -56,21 +56,34 @@
         <div class="section-stages__title-wrapper">
             <h2 class="title section-title section-stages__title">Этапы преображения<br>Васюков <span class="section-stages__title_selected">Будущие источники<br>обогащения васюкинцев</span></h2>
         </div>
-        <ul class="stages-list">
-            <li class="stages-list__item">строительство железнодорожной магистрали Москва-Васюки</li>
-            <li class="stages-list__item">Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов</li>
-            <li class="stages-list__item">Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</li>
-            <li class="stages-list__item">строительство дворца для турнира</li>
-            <li class="stages-list__item">Размещение гаражей для гостевого автотранспорта</li>
-            <li class="stages-list__item">Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов</li>
-            <li class="stages-list__item">создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн</li>
-        </ul>
+        <div class="stages-list-wrapper">
+            <ul class="stages-list">
+                <li class="stages-list__item">строительство железнодорожной магистрали Москва-Васюки</li>
+                <li class="stages-list__item">Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов</li>
+                <li class="stages-list__item">Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</li>
+                <li class="stages-list__item">строительство дворца для турнира</li>
+                <li class="stages-list__item">Размещение гаражей для гостевого автотранспорта</li>
+                <li class="stages-list__item">Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов</li>
+                <li class="stages-list__item">создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн</li>
+            </ul>
+            <div class="stages-list-navigation">
+                <button class="stages-list-navigation__button stages-list-navigation__button_prev stages-list-navigation__button_disable"></button>
+                <div class="stages-list-navigation__points">
+                    <span class="stages-list-navigation__point stages-list-navigation__point_active"></span>
+                    <span class="stages-list-navigation__point"></span>
+                    <span class="stages-list-navigation__point"></span>
+                    <span class="stages-list-navigation__point"></span>
+                    <span class="stages-list-navigation__point"></span>
+                </div>
+                <button class="stages-list-navigation__button stages-list-navigation__button_next"></button>
+            </div>
+        </div>
     </section>
     <section class="section section-participants">
         <h2 class="title section-title section-participants__title">Участники турнира</h2>
         <div class="slider-navigation">
             <button class="slider-navigation__button slider-navigation__button_prev"></button>
-            <div class="slider-navigation__counter"><span class="slider-navigation__current-number">1</span> / <span class="slider-navigation__count"></span></div>
+            <div class="slider-navigation__counter"><span class="slider-navigation__current-number"></span> / <span class="slider-navigation__count"></span></div>
             <button class="slider-navigation__button slider-navigation__button_next"></button>
         </div>
         <div class="slider">
@@ -125,6 +138,7 @@
     <footer class="footer">
         <p class="footer__text">Все персонажи, события и цитаты являются вымышленными и не принадлежат создателям сайта. с подробностями можно познакомиться в главе XXXIV романа Ильи Ильфа и Евгения Петрова «Двенадцать стульев».</p>
     </footer>
-    <script src="./index.js"></script>
+    <script src="./scripts/slider-participants.js"></script>
+    <script src="./scripts/slider-stages.js"></script>
 </body>
 </html>
