@@ -147,28 +147,20 @@
 
 }
     </style>
-    <div class="block">
-    <div class="headline">Читайте также</div>
-    <ya-units-grid rows="${grid_rows}" cols="${grid_columns}">
-        <div class="unit">
-            <ya-unit-category class="ya-unit-category_default" ad-only/>
-            <div class="image">
-                <ya-unit-media />
-            </div>
-            <div class="body">
-                <div class="title">
-                    <ya-clamp lines="3"><ya-unit-title /></ya-clamp>
-                </div>
-                <div class="meta">
-                    <ya-unit-date class="date"/>
-                    <ya-unit-domain class="domain"/>
-                </div>
-            </div>
-        </div>
-        <ya-unit-kebab />
-    </ya-units-grid>
-    <ya-recommendation-label />
+    <div class="wrapper">
+  <div class="headline">Заголовок рекомендательного виджета</div>
+  <ya-units-grid cols="${grid_columns}" rows="${grid_rows}">
+    <div class="image"><ya-unit-image /></div>
+    <div class="title"><ya-unit-title /></div>
+    <div class="desc"><ya-unit-desc /></div>
+    <div class="domain"><ya-unit-domain /></div>
+    <div class="meta">
+                      <ya-unit-category class="category"/><ya-unit-date class="date"/></div>
+    <ya-unit-kebab />
+  </ya-units-grid>
+  <ya-recommendation-label />
 </div>
+
 
     <!-- Yandex.RTB C-A-505429-173 -->
 <div id="yandex_rtb_C-A-505429-173"></div>
