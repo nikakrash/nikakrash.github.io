@@ -10,28 +10,157 @@
 </head>
 <body>
     <style>
-        .wrapper {
-            background: #fff; /* цвет подложки — белый */
-            padding: 10px; /* отступы внутри рамки, со всех сторон — 10 пикселей */
-            margin: 5px; /* отступы снаружи рамки, со всех сторон — 5 пикселей */
-            border: 2px solid #000; /* рамка: толщина — 1 пиксель, тип линии — сплошная, цвет — черный */
-            border-radius: 6px; /* скругление углов рамки с 6 пикселей */
+        .block {
+            padding: 0;
         }
-
+        .block-label {
+            display: block;
+            width: 100%;
+            margin-top: 16px;
+            text-align: right;
+        }
+        .label {
+            display: block;
+            font-family: "Roboto Slab", Arial, sans-serif;
+            font-size: 17px;
+            line-height: 24px;
+            color: #999999;
+        }
+        .headline {
+            font-family: "Roboto Slab", Arial, sans-serif;
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 24px;
+            color: #37404D;
+            padding-bottom: 15px;
+            padding-top: 15px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .grid {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: stretch;
+            align-content: flex-start;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .grid-row {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: stretch;
+            align-content: flex-start;
+            width: 100%;
+            margin-top: 15px;
+        }
+        .grid-row:first-child {
+            margin-top: 0;
+        }
+        .grid-item {
+            position: relative;
+            flex: 1 1 0px;
+            margin-left: 10px;
+        }
+        .grid-item:first-child {
+            margin-left: 0;
+        }
+        .unit-wrapper {
+            position: relative;
+            display: flex;
+            box-sizing: border-box;
+            margin: 0 auto;
+            overflow: hidden;
+            font-family: "Open Sans", Arial, sans-serif;
+            width: 100%;
+            height: 100%;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 16px;
+            background-color: #fff;
+        }
+        .unit {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            text-decoration: none;
+            color: black;
+            width: 100%;
+            cursor: pointer;
+        }
+        .image {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            height: 0;
+            padding-bottom: 56.25%;
+            flex-grow: 0;
+            flex-shrink: 0;
+            margin-bottom: 10px;
+        }
+        .ya-unit-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .unit-image,
+        .yrw-img-component {
+            height: 100%;
+            padding-bottom: 0 !important;
+        }
+        .body {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        .title {
+            font-family: Roboto, sans-serif, Arial;
+            line-height: 24px;
+            font-size: 21px;
+            font-weight: 700;
+            padding: 8px 12px 32px 12px;
+            color: #37404D;
+        }
+        .ya-image-gallery {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        } 
+        .meta {
+            display: none;
+            color: #757575;
+            font-size: 12px;
+            padding-left: 10px;
+        }
     </style>
     
-    <div class="wrapper">
-        <ya-units-grid cols="${grid_columns}" rows="${grid_rows}">
-            <div class="image"><ya-unit-image /></div>
-            <div class="title"><ya-unit-title /></div>
-            <div class="domain"><ya-unit-domain /></div>
-            <div class="meta">
-                <ya-unit-category class="category"/><ya-unit-date class="date"/>
+    <div class="block">
+        <div class="headline">Читайте также</div>
+        <ya-units-grid rows="${grid_rows}" cols="${grid_columns}">
+            <div class="unit">
+                <ya-unit-category class="ya-unit-category_default" ad-only/>
+                <div class="image">
+                    <ya-unit-media />
+                </div>
+                <div class="body">
+                    <div class="title">
+                        <ya-clamp lines="3"><ya-unit-title /></ya-clamp>
+                    </div>
+                    <div class="meta">
+                        <ya-unit-date class="date"/>
+                        <ya-unit-domain class="domain"/>
+                    </div>
+                </div>
             </div>
             <ya-unit-kebab />
         </ya-units-grid>
         <ya-recommendation-label />
-    </div>
+    </div>    
 
     <!-- Yandex.RTB C-A-505429-173 -->
      <div id="yandex_rtb_C-A-505429-173"></div>
